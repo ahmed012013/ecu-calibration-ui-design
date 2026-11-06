@@ -75,7 +75,7 @@ export default function Page() {
         <div className="project-path"><span>PROJECT / S15_SR20DET</span><ChevronRight /><strong>MAPS / IGNITION</strong><ChevronRight /><strong>MAIN IGNITION MAP</strong></div>
         <div className="top-actions"><button aria-label="Search"><Search /></button><button aria-label="Upload file"><Upload /></button><button aria-label="Download file"><Download /></button><button className="avatar">AK</button></div>
       </header>
-      <div className="workspace">
+      <div className={`workspace ${activeTab === 'diagnosis' ? 'diagnosis-mode' : 'calibration-mode'}`}>
         {sidebar && <aside className="sidebar">
           <div className="side-heading"><span>ECU MAPS</span><button onClick={() => setSidebar(false)} aria-label="Collapse sidebar"><Menu /></button></div>
           <div className="ecu-card"><div className="ecu-icon"><Database /></div><div><strong>HALTECH ELITE 2500</strong><span>CONNECTED · CAN 2.0B</span></div><span className="dot green" /></div>
